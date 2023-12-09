@@ -1,18 +1,18 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
-// import About from './components/About';
+import About from './components/About';
 import { useState } from 'react';
 import Alert from './components/Alert';
 import React from 'react';
 import * as ReactDOM from "react-dom/client";
 
-// import {
-//   BrowserRouter as Router,
-//   Routes,
-//   Route,
-//   Link,
-// } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+} from "react-router-dom";
 
 function App() {
   // Defining the useState
@@ -45,17 +45,17 @@ function App() {
       <Navbar title="Nextutils" mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert} />
       <div className="container">
-      <TextForm showAlert={showAlert} heading="Enter the text to convert to uppercase" />
-        {/* <Router> */}
-          {/* <div ><Link to='/textform'>textform</Link></div> */}
-          {/* <Link to='/about'>About</Link> */}
+      {/* <TextForm showAlert={showAlert} heading="Enter the text to convert to uppercase" /> */}
+        <Router>
+          {/* <div ><Link to='/textform'>textform</Link></div>
+          <Link to='/about'>About</Link> */}
 
-          {/* <Routes> */}
-            {/* <Route path='/textform' element={<TextForm showAlert={showAlert} mode={mode} heading="Enter the text to convert to uppercase" />} />
-          {<Route path='/about' element={<About />} />} */}
+          <Routes>
+            <Route path='/textform' element={<TextForm showAlert={showAlert} mode={mode} heading="Enter the text to convert to uppercase" />} />
+          {<Route path='/about' element={<About />} />}
 
-          {/* </Routes> */}
-        {/* </Router> */}
+          </Routes>
+        </Router>
 
       </div>
     </>
